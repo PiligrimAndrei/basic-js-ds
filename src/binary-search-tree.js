@@ -21,6 +21,9 @@ class BinarySearchTree {
 
   root() {
     // throw new NotImplementedError('Not implemented');
+    if (this.head) {
+      this.head.data = this.head.value;
+    }
     return this.head;
   }
 
@@ -67,6 +70,7 @@ class BinarySearchTree {
 
   find(value) {
     //throw new NotImplementedError('Not implemented');
+    this.head.data = this.head.value;
     return searchWith(this.head, value);
 
     function searchWith(node, value) {
@@ -75,6 +79,7 @@ class BinarySearchTree {
       }
 
       if (node.value === value) {
+        node.data = node.value;
         return node;
       }
 
@@ -156,7 +161,7 @@ class BinarySearchTree {
   }
 }
 
-/*function addItems() {
+function addItems() {
   test.add(13);
   test.add(15);
   test.add(9);
@@ -168,13 +173,17 @@ class BinarySearchTree {
 
 }
 function gethead() {
-  console.log(test.root());
+  console.log(test.root().data);
 
 }
 
+function getFind() {
+  console.log(test.find(25).data)
+}
 const test = new BinarySearchTree();
 addItems();
-gethead();*/
+gethead();
+getFind();
 
 module.exports = {
   BinarySearchTree
