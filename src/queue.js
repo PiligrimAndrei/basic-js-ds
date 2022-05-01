@@ -22,13 +22,13 @@ class Queue {
   }
 
   getUnderlyingList() {
-    let current = this.head;
-    let newList = new ListNode;
-    while (current) {
-      newList.value = current.value;
-      current = current.next;
-    }
-    return newList;
+    /* let current = this.head;
+     let newList = new ListNode;
+     while (current) {
+       newList.value = current.value;
+       current = current.next;
+     }*/
+    return this.head;
   }
 
   enqueue(value) {
